@@ -1,3 +1,6 @@
-﻿# Rotate Screen by Shortcut
+﻿#Rotate Screen by Shortcut
 
-Ctrl + Alt + Arrow(Left, Right, Up, Down)
+- Ctrl + Alt + Left Arrow
+- Ctrl + Alt + Right Arrow
+- Ctrl + Alt + Up Arrow
+- Ctrl + Alt + Down Arrow
