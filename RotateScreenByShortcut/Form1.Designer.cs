@@ -30,6 +30,7 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(176, 0);
+      this.Enabled = false;
       this.MaximizeBox = false;
       this.MinimizeBox = false;
       this.Name = "Form1";
@@ -37,7 +38,10 @@
       this.ShowIcon = false;
       this.ShowInTaskbar = false;
       this.Text = "Form1";
+      this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+      this.Shown += new System.EventHandler(this.Form1_Shown);
       this.ResumeLayout(false);
+
     }
     #endregion
   }
