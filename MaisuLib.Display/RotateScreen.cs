@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace MaisuLib.Display {
   public class RotateDisplay {
-    private static bool Rotate(uint DisplayNumber, DisplayOrientations Orientation) {
+    public static bool Rotate(uint DisplayNumber, DisplayOrientations Orientation) {
       if (DisplayNumber == 0)
         throw new ArgumentOutOfRangeException("DisplayNumber", DisplayNumber, "First display is 1.");
 
