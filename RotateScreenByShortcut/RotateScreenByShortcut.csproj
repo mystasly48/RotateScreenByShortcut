@@ -79,13 +79,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KeyboardHook\MaisuLib.Hotkey.csproj">
-      <Project>{8137363c-449e-4013-a3b8-75982829016b}</Project>
-      <Name>MaisuLib.Hotkey</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RotateScreen\MaisuLib.Display.csproj">
+    <ProjectReference Include="..\MaisuLib.Display\MaisuLib.Display.csproj">
       <Project>{e60dc9f8-8251-4949-bd37-fab754a5e7c6}</Project>
       <Name>MaisuLib.Display</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MaisuLib.Hotkey\MaisuLib.Hotkey.csproj">
+      <Project>{8137363c-449e-4013-a3b8-75982829016b}</Project>
+      <Name>MaisuLib.Hotkey</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
