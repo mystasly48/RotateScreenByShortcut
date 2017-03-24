@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
+using System.Diagnostics;
 using MaisuLib.Hotkey;
 using MaisuLib.Display;
-using System.Diagnostics;
 
 namespace RotateScreenByShortcut {
   public partial class Form1 : Form {
@@ -19,7 +20,7 @@ namespace RotateScreenByShortcut {
     }
 
     private void hook_KeyPressed(object sender, KeyPressedEventArgs e) {
-      uint displayIndex = (uint)(Array.IndexOf(Screen.AllScreens, Screen.FromPoint(Cursor.Position)) + 1);
+      uint displayIndex = (uint)(Array.IndexOf(Screen.AllScreens.Reverse().ToArray(), Screen.FromPoint(Cursor.Position)) + 1);
       Debug.WriteLine("Key: {0}, Display: {1}", e.Key, displayIndex);
       switch (e.Key) {
         case Keys.Left:
