@@ -20,7 +20,9 @@ namespace RotateScreenByShortcut {
     }
 
     private void hook_KeyPressed(object sender, KeyPressedEventArgs e) {
-      uint displayIndex = (uint)(Array.IndexOf(Screen.AllScreens.Reverse().ToArray(), Screen.FromPoint(Cursor.Position)) + 1);
+      uint displayIndex = (uint)(Array.IndexOf(
+        Screen.AllScreens.OrderBy(x => int.Parse(x.DeviceName.Replace("\\\\.\\DISPLAY", ""))).ToArray(),
+        Screen.FromPoint(Cursor.Position)) + 1); // DeviceName:"\\\\.\\DISPLAY1"
       Debug.WriteLine("Key: {0}, Display: {1}", e.Key, displayIndex);
       switch (e.Key) {
         case Keys.Left:
